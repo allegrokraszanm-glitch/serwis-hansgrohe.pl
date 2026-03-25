@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta -->
     <title>Autoryzowany serwis Hansgrohe w Krakowie – Tomasz Jarosz</title>
     <meta name="description" content="Autoryzowany serwis Hansgrohe w Krakowie i Małopolsce – naprawa, montaż, części. Obsługujemy Hansgrohe, Geberit i Grohe. Kontakt: Tomasz Jarosz.">
     <meta name="keywords" content="Kraków, małopolska, części, serwis, naprawa, montaż, hansgrohe, geberit, grohe, Tomasz Jarosz, autoryzowany serwis">
     <meta name="robots" content="index, follow">
 
-    <!-- Opcjonalnie favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="serwis-hansgrohe-krakow.jpg" type="image/jpeg">
-    
+
     <!-- Prosty styl -->
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
@@ -22,6 +22,13 @@
         img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
         section { padding: 20px; max-width: 800px; margin: auto; }
         footer { background: #f0f0f0; padding: 20px; text-align: center; font-size: 0.9em; }
+        nav ul { list-style: none; padding: 0; text-align: center; }
+        nav li { display: inline-block; margin: 0 10px; }
+        nav a { text-decoration: none; color: #333; font-weight: bold; }
+        form { max-width: 500px; margin: 20px auto; display: flex; flex-direction: column; }
+        input, textarea { margin-bottom: 10px; padding: 8px; font-size: 1em; }
+        button { padding: 10px; background: #0078D7; color: white; border: none; cursor: pointer; }
+        button:hover { background: #005ea1; }
     </style>
 </head>
 <body>
@@ -29,23 +36,43 @@
 <header>
     <h1>Autoryzowany serwis Hansgrohe w Krakowie i Małopolsce</h1>
     <img src="serwis-hansgrohe-krakow.jpg" alt="Autoryzowany serwis Hansgrohe Kraków Tomasz Jarosz">
+    <nav>
+        <ul>
+            <li><a href="#uslugi">Usługi</a></li>
+            <li><a href="#montaz">Montaż i Naprawa</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section>
+<section id="uslugi">
     <h2>Nasze usługi</h2>
     <p>Oferujemy profesjonalny serwis Hansgrohe w Krakowie i Małopolsce. Wymieniamy części, naprawiamy armaturę, montujemy nowe systemy. Obsługujemy także Geberit i Grohe. Autoryzowany serwis Tomasz Jarosz – szybka i rzetelna obsługa.</p>
-    
+</section>
+
+<section id="montaz">
     <h2>Montaż i naprawa</h2>
     <p>Zajmujemy się kompleksowym montażem i naprawą urządzeń sanitarnych. Nasze usługi obejmują naprawę, wymianę części i konserwację systemów Hansgrohe, Geberit oraz Grohe.</p>
-    
+</section>
+
+<section id="kontakt">
     <h2>Kontakt</h2>
     <p>📍 Kraków, Małopolska</p>
     <p>📞 660 469 203</p>
     <p>✉ jarosztom@wp.pl</p>
+
+    <h2>Formularz kontaktowy</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Imię i nazwisko" required>
+        <input type="email" name="email" placeholder="Adres e-mail" required>
+        <textarea name="message" placeholder="Wiadomość" rows="5" required></textarea>
+        <button type="submit">Wyślij</button>
+    </form>
 </section>
 
 <footer>
     <p>© 2026 Autoryzowany serwis Hansgrohe – Tomasz Jarosz</p>
+    <p><a href="sitemap.xml">Mapa strony</a></p>
 </footer>
 
 </body>
