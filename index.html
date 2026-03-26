@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Serwis Hansgrohe Kraków – Tomasz Jarosz</title>
-
-<meta name="description" content="Autoryzowany serwis Hansgrohe Kraków – naprawa, montaż, części. Obsługujemy Geberit i Grohe.">
+<meta name="description" content="Autoryzowany serwis Hansgrohe w Krakowie – naprawa, montaż, części. Obsługujemy Geberit i Grohe. Skontaktuj się z nami.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -14,7 +13,7 @@
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background: #f9f9f9;
+    background: #f7f8fa;
     color: #333;
 }
 
@@ -22,80 +21,112 @@ header {
     background: linear-gradient(135deg, #0078D7, #005ea1);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
 }
 
 header h1 {
-    font-size: 2.2em;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     opacity: 0.9;
 }
 
 .hero-btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
+    margin-top: 25px;
+    padding: 15px 30px;
     background: white;
     color: #0078D7;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
+    transition: 0.3s;
+}
+.hero-btn:hover {
+    background: #f0f0f0;
 }
 
 section {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #0078D7;
 }
 
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .card {
     background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     text-align: center;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
 }
 
 img.main-img {
     width: 100%;
-    max-width: 700px;
+    max-width: 750px;
     display: block;
     margin: 30px auto;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
-.contact {
-    text-align: center;
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.contact-form button {
     background: #0078D7;
     color: white;
-    padding: 40px 20px;
-    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #005ea1;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     background: #eee;
     font-size: 0.9em;
 }
-
 iframe {
-    border-radius: 10px;
+    border-radius: 15px;
 }
 </style>
 </head>
@@ -109,36 +140,36 @@ iframe {
 </header>
 
 <section>
-    <h2>Profesjonalny serwis</h2>
+    <h2>Profesjonalny serwis Hansgrohe</h2>
     <img src="serwis-hansgrohe-krakow.jpg" class="main-img" alt="Serwis Hansgrohe Kraków">
     <p style="text-align:center;">
-        Oferujemy serwis Hansgrohe w Krakowie i Małopolsce. Naprawiamy, montujemy i wymieniamy części do systemów sanitarnych.
+        Autoryzowany serwis Hansgrohe w Krakowie i Małopolsce. Naprawa, montaż i wymiana części do systemów sanitarnych. Obsługujemy również Geberit i Grohe.
     </p>
 </section>
 
 <section>
     <h2>Nasze usługi</h2>
     <div class="services">
-        <div class="card">🔧 Naprawa baterii</div>
+        <div class="card">🔧 Naprawa baterii Hansgrohe</div>
         <div class="card">🚿 Montaż armatury</div>
-        <div class="card">🧰 Wymiana części</div>
+        <div class="card">🧰 Wymiana części i konserwacja</div>
         <div class="card">💧 Serwis Geberit i Grohe</div>
     </div>
 </section>
 
 <section>
-    <h2>Dlaczego my?</h2>
+    <h2>Dlaczego warto nas wybrać?</h2>
     <div class="services">
         <div class="card">✔ Doświadczenie</div>
         <div class="card">✔ Szybkie terminy</div>
         <div class="card">✔ Profesjonalizm</div>
+        <div class="card">✔ Autoryzowany serwis</div>
     </div>
 </section>
 
 <section>
     <h2>Obszar działania</h2>
     <p style="text-align:center;">Kraków i okolice: Podgórze, Nowa Huta, Krowodrza, Bronowice</p>
-
     <iframe 
         src="https://www.google.com/maps?q=Krakow&output=embed"
         width="100%" 
@@ -147,11 +178,17 @@ iframe {
     </iframe>
 </section>
 
-<section id="kontakt" class="contact">
-    <h2>Kontakt</h2>
-    <p>📍 Kraków</p>
-    <p>📞 123 456 789</p>
-    <p>✉ kontakt@serwis-hansgrohe.pl</p>
+<section id="kontakt">
+    <h2>Skontaktuj się z nami</h2>
+    <div class="contact-form">
+        <form action="https://formspree.io/f/mnqwojpr" method="POST">
+            <input type="text" name="name" placeholder="Twoje imię i nazwisko" required>
+            <input type="email" name="_replyto" placeholder="Twój email" required>
+            <input type="tel" name="phone" placeholder="Twój telefon">
+            <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
+            <button type="submit">Wyślij wiadomość</button>
+        </form>
+    </div>
 </section>
 
 <footer>
