@@ -18,35 +18,47 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Nagłówek */
+/* Nagłówek z paralaksą */
 header {
     background: linear-gradient(135deg, #0078D7, #005ea1);
     color: white;
     text-align: center;
-    padding: 70px 20px;
+    padding: 80px 20px;
     position: relative;
     overflow: hidden;
 }
-header h1 { font-size: 2.5em; margin-bottom: 10px; }
-header p { font-size: 1.2em; opacity: 0.9; }
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    animation: fadeDown 1s ease forwards;
+}
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    animation: fadeUp 1s ease forwards;
+}
 .hero-btn {
     display: inline-block;
     margin-top: 25px;
-    padding: 15px 30px;
+    padding: 18px 35px;
     background: white;
     color: #0078D7;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 35px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: 0.3s, transform 0.2s;
 }
 .hero-btn:hover { background: #f0f0f0; transform: scale(1.05); }
+
+/* Animacje fadeIn */
+@keyframes fadeDown { from {opacity:0; transform:translateY(-30px);} to {opacity:1; transform:translateY(0);} }
+@keyframes fadeUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
 
 /* Sekcje */
 section {
     max-width: 1100px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 60px 20px;
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease-out;
@@ -55,15 +67,9 @@ section.visible {
     opacity: 1;
     transform: translateY(0);
 }
+h2 { text-align:center; margin-bottom:30px; font-weight:600; color:#0078D7; }
 
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 600;
-    color: #0078D7;
-}
-
-/* Karty usług + animacje hover */
+/* Karty usług z mikroanimacją */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -71,53 +77,51 @@ h2 {
 }
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
     text-align: center;
-    transition: 0.3s, transform 0.3s;
+    transition: 0.3s, transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
 .card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-    background: #e6f0fa;
+    transform: translateY(-12px) scale(1.07);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #e6f0fa, #ffffff);
 }
 
-/* Obrazki */
+/* Obrazki z paralaksą */
 img.main-img {
     width: 100%;
     max-width: 750px;
     display: block;
     margin: 30px auto;
-    border-radius: 15px;
-    transition: 0.3s;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
 }
-img.main-img:hover {
-    transform: scale(1.02);
-}
+img.main-img:hover { transform: scale(1.03); }
 
-/* Formularz kontaktowy */
+/* Formularz kontaktowy premium */
 .contact-form {
     max-width: 600px;
     margin: auto;
     background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
 .contact-form input, .contact-form textarea, .contact-form button {
     width: 100%;
-    padding: 12px 15px;
-    margin: 10px 0;
-    border-radius: 10px;
+    padding: 14px 15px;
+    margin: 12px 0;
+    border-radius: 12px;
     border: 1px solid #ccc;
     font-size: 1em;
-    transition: 0.3s;
+    transition: 0.3s, box-shadow 0.3s;
 }
 .contact-form input:focus, .contact-form textarea:focus {
     border-color: #0078D7;
-    box-shadow: 0 0 5px rgba(0,120,215,0.5);
+    box-shadow: 0 0 8px rgba(0,120,215,0.4);
 }
 .contact-form button {
     background: #0078D7;
@@ -125,34 +129,37 @@ img.main-img:hover {
     border: none;
     cursor: pointer;
     font-weight: bold;
-    transition: 0.3s, transform 0.2s;
+    transition: 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 .contact-form button:hover {
     background: #005ea1;
     transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-/* Sticky CTA */
+/* Sticky CTA premium */
 #sticky-contact {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     background: #0078D7;
     color: white;
-    padding: 15px 20px;
+    padding: 18px 25px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.35);
     transition: 0.3s, transform 0.2s;
     z-index: 100;
 }
 #sticky-contact:hover { background: #005ea1; transform: scale(1.1); }
 
 /* Stopka */
-footer { text-align: center; padding: 25px; background: #eee; font-size: 0.9em; }
+footer { text-align:center; padding:25px; background:#eee; font-size:0.9em; }
 
-iframe { border-radius: 15px; }
+/* iframe mapy */
+iframe { border-radius:20px; transition: transform 0.3s; }
+iframe:hover { transform: scale(1.02); }
 
 </style>
 </head>
