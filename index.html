@@ -1,119 +1,161 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta -->
-    <title>Autoryzowany serwis Hansgrohe w Krakowie – Tomasz Jarosz</title>
-    <meta name="description" content="Autoryzowany serwis Hansgrohe w Krakowie i Małopolsce – naprawa, montaż, części. Obsługujemy Hansgrohe, Geberit i Grohe. Kontakt: Tomasz Jarosz.">
-    <meta name="keywords" content="Kraków, małopolska, części, serwis, naprawa, montaż, hansgrohe, geberit, grohe, Tomasz Jarosz, autoryzowany serwis">
-    <meta name="robots" content="index, follow">
+<title>Serwis Hansgrohe Kraków – Tomasz Jarosz</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="serwis-hansgrohe-krakow.jpg" type="image/jpeg">
+<meta name="description" content="Autoryzowany serwis Hansgrohe Kraków – naprawa, montaż, części. Obsługujemy Geberit i Grohe.">
 
-    <!-- Prosty styl -->
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-        header { text-align: center; padding: 40px 20px; background: #f0f0f0; }
-        h1 { margin-bottom: 10px; }
-        h2 { margin-top: 30px; color: #333; }
-        img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
-        section { padding: 20px; max-width: 800px; margin: auto; }
-        footer { background: #f0f0f0; padding: 20px; text-align: center; font-size: 0.9em; }
-        nav ul { list-style: none; padding: 0; text-align: center; }
-        nav li { display: inline-block; margin: 0 10px; }
-        nav a { text-decoration: none; color: #333; font-weight: bold; }
-        form { max-width: 500px; margin: 20px auto; display: flex; flex-direction: column; }
-        input, textarea { margin-bottom: 10px; padding: 8px; font-size: 1em; }
-        button { padding: 10px; background: #0078D7; color: white; border: none; cursor: pointer; }
-        button:hover { background: #005ea1; }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #0078D7, #005ea1);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: white;
+    color: #0078D7;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+img.main-img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 12px;
+}
+
+.contact {
+    text-align: center;
+    background: #0078D7;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #eee;
+    font-size: 0.9em;
+}
+
+iframe {
+    border-radius: 10px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Autoryzowany serwis Hansgrohe w Krakowie i Małopolsce</h1>
-    <img src="serwis-hansgrohe-krakow.jpg" alt="Autoryzowany serwis Hansgrohe Kraków Tomasz Jarosz">
-    <nav>
-        <ul>
-            <li><a href="#uslugi">Usługi</a></li>
-            <li><a href="#montaz">Montaż i Naprawa</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-    </nav>
+    <h1>Serwis Hansgrohe Kraków</h1>
+    <p>Naprawa • Montaż • Części • Geberit • Grohe</p>
+    <a href="#kontakt" class="hero-btn">Skontaktuj się</a>
 </header>
 
-<section id="uslugi">
+<section>
+    <h2>Profesjonalny serwis</h2>
+    <img src="serwis-hansgrohe-krakow.jpg" class="main-img" alt="Serwis Hansgrohe Kraków">
+    <p style="text-align:center;">
+        Oferujemy serwis Hansgrohe w Krakowie i Małopolsce. Naprawiamy, montujemy i wymieniamy części do systemów sanitarnych.
+    </p>
+</section>
+
+<section>
     <h2>Nasze usługi</h2>
-    <p>Oferujemy profesjonalny serwis Hansgrohe w Krakowie i Małopolsce. Wymieniamy części, naprawiamy armaturę, montujemy nowe systemy. Obsługujemy także Geberit i Grohe. Autoryzowany serwis Tomasz Jarosz – szybka i rzetelna obsługa.</p>
+    <div class="services">
+        <div class="card">🔧 Naprawa baterii</div>
+        <div class="card">🚿 Montaż armatury</div>
+        <div class="card">🧰 Wymiana części</div>
+        <div class="card">💧 Serwis Geberit i Grohe</div>
+    </div>
 </section>
 
-<section id="montaz">
-    <h2>Montaż i naprawa</h2>
-    <p>Zajmujemy się kompleksowym montażem i naprawą urządzeń sanitarnych. Nasze usługi obejmują naprawę, wymianę części i konserwację systemów Hansgrohe, Geberit oraz Grohe.</p>
+<section>
+    <h2>Dlaczego my?</h2>
+    <div class="services">
+        <div class="card">✔ Doświadczenie</div>
+        <div class="card">✔ Szybkie terminy</div>
+        <div class="card">✔ Profesjonalizm</div>
+    </div>
 </section>
-<section id="lokalne-seo">
-    <h2>Serwis Hansgrohe Kraków – profesjonalna naprawa i montaż</h2>
-    
-    <p>Oferujemy profesjonalny serwis Hansgrohe w Krakowie oraz na terenie całej Małopolski. Specjalizujemy się w naprawie baterii, montażu armatury oraz wymianie części do systemów sanitarnych.</p>
 
-    <p>Obsługujemy urządzenia renomowanych marek takich jak Hansgrohe, Geberit oraz Grohe. Dzięki doświadczeniu zapewniamy szybką diagnozę i skuteczną naprawę.</p>
-
-    <h2>Zakres usług</h2>
-    <ul>
-        <li>naprawa baterii Hansgrohe Kraków</li>
-        <li>serwis Geberit Kraków</li>
-        <li>montaż armatury Grohe</li>
-        <li>wymiana części i konserwacja</li>
-        <li>usuwanie usterek hydraulicznych</li>
-    </ul>
-
+<section>
     <h2>Obszar działania</h2>
-    <p>Działamy na terenie Krakowa i okolic: Podgórze, Nowa Huta, Krowodrza, Bronowice oraz całe województwo małopolskie.</p>
-
-    <h2>Dlaczego warto wybrać nasz serwis?</h2>
-    <ul>
-        <li>autoryzowany serwis Hansgrohe</li>
-        <li>wieloletnie doświadczenie</li>
-        <li>szybkie terminy realizacji</li>
-        <li>obsługa klientów indywidualnych i firm</li>
-    </ul>
-
-    <p>Jeśli potrzebny jest sprawdzony hydraulik w Krakowie – skontaktuj się z nami. Oferujemy profesjonalny serwis, naprawę i montaż systemów Hansgrohe, Geberit oraz Grohe.</p>
-</section>
-<section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>📍 Kraków, Małopolska</p>
-    <p>📞 660 469 203</p>
-    <p>✉ jarosztom@wp.pl</p>
-<section id="mapa">
-    <h2>Obszar działania – Kraków i Małopolska</h2>
-
-    <p>Świadczymy usługi serwisowe Hansgrohe na terenie Krakowa i całej Małopolski. Dojeżdżamy do klientów na terenie całego miasta oraz okolicznych miejscowości.</p>
+    <p style="text-align:center;">Kraków i okolice: Podgórze, Nowa Huta, Krowodrza, Bronowice</p>
 
     <iframe 
         src="https://www.google.com/maps?q=Krakow&output=embed"
         width="100%" 
         height="350" 
-        style="border:0; margin-top:20px;" 
-        allowfullscreen="" 
         loading="lazy">
     </iframe>
 </section>
-    <h2>Formularz kontaktowy</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input type="text" name="name" placeholder="Imię i nazwisko" required>
-        <input type="email" name="email" placeholder="Adres e-mail" required>
-        <textarea name="message" placeholder="Wiadomość" rows="5" required></textarea>
-        <button type="submit">Wyślij</button>
-    </form>
+
+<section id="kontakt" class="contact">
+    <h2>Kontakt</h2>
+    <p>📍 Kraków</p>
+    <p>📞 123 456 789</p>
+    <p>✉ kontakt@serwis-hansgrohe.pl</p>
 </section>
-</section>
+
 <footer>
-    <p>© 2026 Autoryzowany serwis Hansgrohe – Tomasz Jarosz</p>
-    <p><a href="sitemap.xml">Mapa strony</a></p>
+    © 2026 Serwis Hansgrohe Kraków – Tomasz Jarosz
 </footer>
 
 </body>
