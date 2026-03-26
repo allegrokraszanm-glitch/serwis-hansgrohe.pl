@@ -125,6 +125,7 @@ footer {
     background: #eee;
     font-size: 0.9em;
 }
+
 iframe {
     border-radius: 15px;
 }
@@ -181,19 +182,42 @@ iframe {
 <section id="kontakt">
     <h2>Skontaktuj się z nami</h2>
     <div class="contact-form">
-        <form action="https://formspree.io/f/mnqwojpr" method="POST">
+        <form onsubmit="sendEmail(event)">
             <input type="text" name="name" placeholder="Twoje imię i nazwisko" required>
-            <input type="email" name="_replyto" placeholder="Twój email" required>
+            <input type="email" name="email" placeholder="Twój email" required>
             <input type="tel" name="phone" placeholder="Twój telefon">
             <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
             <button type="submit">Wyślij wiadomość</button>
         </form>
+        <p id="success" style="text-align:center; color:green; display:none;">Wiadomość została wysłana! 📩</p>
     </div>
 </section>
 
 <footer>
     © 2026 Serwis Hansgrohe Kraków – Tomasz Jarosz
 </footer>
+
+<script>
+function sendEmail(event){
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const message = form.message.value;
+
+    // Tworzymy mailto link
+    const subject = encodeURIComponent("Kontakt ze strony – Serwis Hansgrohe Kraków");
+    const body = encodeURIComponent(`Imię i nazwisko: ${name}\nEmail: ${email}\nTelefon: ${phone}\nWiadomość:\n${message}`);
+    window.location.href = `mailto:kontakt@serwis-hansgrohe.pl?subject=${subject}&body=${body}`;
+
+    // Pokazujemy komunikat
+    document.getElementById("success").style.display = "block";
+
+    // Reset formularza
+    form.reset();
+}
+</script>
 
 </body>
 </html>
