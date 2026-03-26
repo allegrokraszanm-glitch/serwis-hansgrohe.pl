@@ -15,25 +15,26 @@ body {
     margin: 0;
     background: #f7f8fa;
     color: #333;
+    scroll-behavior: smooth;
 }
 
+/* Nagłówek */
 header {
     background: linear-gradient(135deg, #0078D7, #005ea1);
     color: white;
     text-align: center;
     padding: 70px 20px;
+    position: relative;
+    overflow: hidden;
 }
-
 header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
-
 header p {
     font-size: 1.2em;
     opacity: 0.9;
 }
-
 .hero-btn {
     display: inline-block;
     margin-top: 25px;
@@ -49,10 +50,18 @@ header p {
     background: #f0f0f0;
 }
 
+/* Sekcje */
 section {
     max-width: 1100px;
     margin: auto;
     padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h2 {
@@ -88,6 +97,7 @@ img.main-img {
     border-radius: 15px;
 }
 
+/* Formularz kontaktowy */
 .contact-form {
     max-width: 600px;
     margin: auto;
@@ -96,7 +106,6 @@ img.main-img {
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
-
 .contact-form input, .contact-form textarea, .contact-form button {
     width: 100%;
     padding: 12px 15px;
@@ -105,7 +114,6 @@ img.main-img {
     border: 1px solid #ccc;
     font-size: 1em;
 }
-
 .contact-form button {
     background: #0078D7;
     color: white;
@@ -114,11 +122,30 @@ img.main-img {
     font-weight: bold;
     transition: 0.3s;
 }
-
 .contact-form button:hover {
     background: #005ea1;
 }
 
+/* Sticky CTA */
+#sticky-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0078D7;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+    z-index: 100;
+}
+#sticky-contact:hover {
+    background: #005ea1;
+}
+
+/* Stopka */
 footer {
     text-align: center;
     padding: 25px;
@@ -129,6 +156,8 @@ footer {
 iframe {
     border-radius: 15px;
 }
+
+/* Animacja przy przewijaniu */
 </style>
 </head>
 
@@ -193,11 +222,28 @@ iframe {
     </div>
 </section>
 
+<a href="#kontakt" id="sticky-contact">Kontakt 📩</a>
+
 <footer>
     © 2026 Serwis Hansgrohe Kraków – Tomasz Jarosz
 </footer>
 
 <script>
+// Animacja przy przewijaniu
+function revealSections() {
+    const sections = document.querySelectorAll('section');
+    const windowHeight = window.innerHeight;
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < windowHeight - 100){
+            sec.classList.add('visible');
+        }
+    });
+}
+window.addEventListener('scroll', revealSections);
+window.addEventListener('load', revealSections);
+
+// Formularz darmowy
 function sendEmail(event){
     event.preventDefault();
     const form = event.target;
@@ -206,15 +252,11 @@ function sendEmail(event){
     const phone = form.phone.value;
     const message = form.message.value;
 
-    // Tworzymy mailto link
     const subject = encodeURIComponent("Kontakt ze strony – Serwis Hansgrohe Kraków");
     const body = encodeURIComponent(`Imię i nazwisko: ${name}\nEmail: ${email}\nTelefon: ${phone}\nWiadomość:\n${message}`);
     window.location.href = `mailto:kontakt@serwis-hansgrohe.pl?subject=${subject}&body=${body}`;
 
-    // Pokazujemy komunikat
     document.getElementById("success").style.display = "block";
-
-    // Reset formularza
     form.reset();
 }
 </script>
