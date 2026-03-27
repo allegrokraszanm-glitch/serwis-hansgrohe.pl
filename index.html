@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Serwis Hansgrohe Kraków | Naprawa, Montaż, Geberit, Grohe – Szybkie terminy</title>
-<meta name="description" content="Serwis Hansgrohe Kraków – naprawa, montaż i części. Obsługujemy Geberit i Grohe. Szybkie terminy, fachowa obsługa. Zadzwoń i umów wizytę!">
+<title>Serwis Hansgrohe Kraków | Naprawa, Montaż, Geberit, Grohe</title>
+<meta name="description" content="Autoryzowany serwis Hansgrohe w Krakowie – naprawa, montaż i części. Obsługujemy Geberit i Grohe. Szybkie terminy, fachowa obsługa. Zadzwoń i umów wizytę!">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -21,17 +21,6 @@ header {
 }
 header h1 { font-size:2.5em; margin-bottom:10px; }
 header p { font-size:1.1em; opacity:0.9; }
-
-/* HERO IMG */
-.hero-img {
-    width:100%;
-    max-width:900px;
-    display:block;
-    margin:30px auto;
-    border-radius:20px;
-}
-
-/* BUTTONY */
 .hero-btn, .call-btn {
     display:inline-block;
     margin-top:20px;
@@ -42,6 +31,15 @@ header p { font-size:1.1em; opacity:0.9; }
 }
 .hero-btn { background:white; color:#0078D7; }
 .call-btn { background:#00c853; color:white; margin-left:10px; }
+
+/* HERO IMG */
+.hero-img {
+    width:100%;
+    max-width:900px;
+    display:block;
+    margin:30px auto;
+    border-radius:20px;
+}
 
 /* SEKCJE */
 section { max-width:1100px; margin:auto; padding:60px 20px; }
@@ -67,50 +65,30 @@ h2 { text-align:center; color:#0078D7; margin-bottom:30px; }
     box-shadow:0 20px 50px rgba(0,0,0,0.2);
 }
 
-/* GALERIA PRZEWIJANA POZIOMO */
-.gallery-container {
-    overflow-x:auto;
-    white-space:nowrap;
-    margin-top:30px;
-    padding-bottom:15px;
-}
-.gallery-container img {
-    display:inline-block;
+/* GALERIA PREMIUM */
+.slider-wrapper { overflow:hidden; width:100%; margin-top:30px; }
+.slider-track { display:flex; gap:15px; animation: scroll 15s linear infinite; }
+.slider-track img {
     width:250px;
-    margin-right:15px;
+    flex-shrink:0;
     border-radius:15px;
-    transition:0.3s;
+    transition: transform 0.3s;
 }
-.gallery-container img:hover { transform:scale(1.05); }
+.slider-track img:hover { transform: scale(1.05); }
+@keyframes scroll { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
 
 /* OPINIE */
-.reviews {
-    display:grid;
-    gap:20px;
-}
-.review {
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
+.reviews { display:grid; gap:20px; }
+.review { background:white; padding:20px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1); }
 
 /* FAQ */
-.faq-item {
-    background:white;
-    margin:10px 0;
-    padding:15px;
-    border-radius:10px;
-}
+.faq-item { background:white; margin:10px 0; padding:15px; border-radius:10px; }
 
 /* MAPA */
 iframe { width:100%; height:300px; border-radius:15px; }
 
 /* FORMULARZ KONTAKT */
-.contact-form {
-    max-width:500px;
-    margin:auto;
-}
+.contact-form { max-width:500px; margin:auto; }
 .contact-form input, .contact-form textarea, .contact-form button {
     width:100%;
     padding:12px;
@@ -156,12 +134,17 @@ footer { text-align:center; padding:20px; background:#eee; }
         <div class="card">💧 Serwis Geberit i Grohe</div>
     </div>
 
-    <!-- GALERIA POZIOMA -->
-    <div class="gallery-container">
-        <img src="serwis-hansgrohe-krakow.jpg" alt="Realizacja 1">
-        <img src="serwis-hansgrohe-krakow.jpg" alt="Realizacja 2">
-        <img src="serwis-hansgrohe-krakow.jpg" alt="Realizacja 3">
-        <img src="serwis-hansgrohe-krakow.jpg" alt="Realizacja 4">
+    <!-- GALERIA PREMIUM -->
+    <div class="slider-wrapper">
+        <div class="slider-track">
+            <img src="grafika1.jpg" alt="Realizacja 1">
+            <img src="grafika2.jpg" alt="Realizacja 2">
+            <img src="grafika3.jpg" alt="Realizacja 3">
+            <!-- powtórzenie dla pętli -->
+            <img src="grafika1.jpg" alt="Realizacja 1">
+            <img src="grafika2.jpg" alt="Realizacja 2">
+            <img src="grafika3.jpg" alt="Realizacja 3">
+        </div>
     </div>
 </section>
 
@@ -198,7 +181,7 @@ footer { text-align:center; padding:20px; background:#eee; }
     </div>
 </section>
 
-<a href="tel:+48 660 469 203" id="sticky-call">📞 Zadzwoń</a>
+<a href="tel:+48123456789" id="sticky-call">📞 Zadzwoń</a>
 <a href="#kontakt" id="sticky-contact">Kontakt</a>
 
 <footer>
@@ -206,10 +189,14 @@ footer { text-align:center; padding:20px; background:#eee; }
 </footer>
 
 <script>
+// PREMIUM SLIDER - AUTO LOOP
+// działa dzięki powtórzeniu obrazów w HTML i CSS animacji
+
+// DARMOWY FORMULARZ MAILTO
 function sendEmail(event){
     event.preventDefault();
     const form = event.target;
-    const body = encodeURIComponent(form.message.value);
+    const body = encodeURIComponent(`Imię i nazwisko: ${form.name.value}\nEmail: ${form.email.value}\nWiadomość:\n${form.message.value}`);
     window.location.href = `mailto:kontakt@serwis-hansgrohe.pl?body=${body}`;
 }
 </script>
