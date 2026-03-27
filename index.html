@@ -45,7 +45,7 @@ header p { font-size:1.1em; opacity:0.9; }
 section { max-width:1100px; margin:auto; padding:60px 20px; }
 h2 { text-align:center; color:#0078D7; margin-bottom:30px; }
 
-/* KARTY */
+/* KARTY USŁUG */
 .services {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -65,15 +65,26 @@ h2 { text-align:center; color:#0078D7; margin-bottom:30px; }
     box-shadow:0 20px 50px rgba(0,0,0,0.2);
 }
 
-/* GALERIA PREMIUM - przewijanie + lightbox */
-.slider-wrapper { overflow:hidden; width:100%; margin-top:30px; }
-.slider-track { display:flex; gap:15px; animation: scroll 15s linear infinite; }
+/* GALERIA PREMIUM - przewijanie z zachowaniem proporcji */
+.slider-wrapper { 
+    overflow: hidden; 
+    width: 100%; 
+    margin-top: 30px; 
+    height: 250px; /* wysokość slidera */
+}
+.slider-track { 
+    display: flex; 
+    gap: 15px; 
+    animation: scroll 15s linear infinite; 
+}
 .slider-track img {
-    width:250px;
-    flex-shrink:0;
-    border-radius:15px;
-    transition: transform 0.3s;
-    cursor:pointer;
+    width: auto; 
+    height: 100%; /* wypełnia wysokość slidera */
+    flex-shrink: 0; 
+    border-radius: 15px; 
+    transition: transform 0.3s; 
+    cursor: pointer; 
+    object-fit: cover; /* zachowanie proporcji */
 }
 .slider-track img:hover { transform: scale(1.05); }
 @keyframes scroll { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
@@ -148,6 +159,7 @@ iframe { width:100%; height:300px; border-radius:15px; }
             <img src="grafika1.jpg" alt="Realizacja 1" onclick="openLightbox(this.src)">
             <img src="grafika2.jpg" alt="Realizacja 2" onclick="openLightbox(this.src)">
             <img src="grafika3.jpg" alt="Realizacja 3" onclick="openLightbox(this.src)">
+            <!-- powtórzenie dla płynnego przewijania -->
             <img src="grafika1.jpg" alt="Realizacja 1" onclick="openLightbox(this.src)">
             <img src="grafika2.jpg" alt="Realizacja 2" onclick="openLightbox(this.src)">
             <img src="grafika3.jpg" alt="Realizacja 3" onclick="openLightbox(this.src)">
