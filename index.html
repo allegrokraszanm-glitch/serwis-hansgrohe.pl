@@ -11,136 +11,103 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background: #f7f8fa;
-    color: #333;
-}
+body { font-family: 'Inter', sans-serif; margin:0; background:#f7f8fa; }
 
 /* HEADER */
 header {
     background: linear-gradient(135deg, #0078D7, #005ea1);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
 }
-
-header h1 { font-size: 2.8em; }
+header h1 { font-size:2.8em; }
 
 /* BUTTONY */
 .hero-btn, .call-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    border-radius:30px;
+    font-weight:bold;
+    text-decoration:none;
 }
-
-.hero-btn {
-    background: white;
-    color: #0078D7;
-}
-
-.call-btn {
-    background: #00c853;
-    color: white;
-    margin-left: 10px;
-}
+.hero-btn { background:white; color:#0078D7; }
+.call-btn { background:#00c853; color:white; margin-left:10px; }
 
 /* SEKCJE */
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
-}
+section { max-width:1100px; margin:auto; padding:60px 20px; }
+h2 { text-align:center; color:#0078D7; }
 
-h2 {
-    text-align:center;
-    color:#0078D7;
-}
-
-/* KARTY – PREMIUM HOVER */
+/* KARTY */
 .services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
-
 .card {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-12px) scale(1.05);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-}
-
-/* OBRAZ */
-img {
-    width: 100%;
-    max-width: 700px;
-    display: block;
-    margin: 30px auto;
-    border-radius: 15px;
-}
-
-/* FORMULARZ */
-.contact-form {
-    max-width: 500px;
-    margin: auto;
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-}
-
-.contact-form button {
-    background: #0078D7;
-    color: white;
-    border: none;
-}
-
-/* STICKY TELEFON */
-#sticky-call {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: #00c853;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#sticky-contact {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #0078D7;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-}
-
-/* STOPKA */
-footer {
+    background:white;
+    padding:25px;
+    border-radius:20px;
     text-align:center;
-    padding:20px;
-    background:#eee;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
+.card:hover {
+    transform:translateY(-12px) scale(1.05);
+    box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* GALERIA */
+.gallery {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.gallery img {
+    width:100%;
+    border-radius:15px;
+    transition:0.3s;
+}
+.gallery img:hover { transform:scale(1.05); }
+
+/* OPINIE */
+.reviews {
+    display:grid;
+    gap:20px;
+}
+.review {
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* FAQ */
+.faq-item {
+    background:white;
+    margin:10px 0;
+    padding:15px;
+    border-radius:10px;
+}
+
+/* MAPA */
+iframe { width:100%; height:300px; border-radius:15px; }
+
+/* STICKY */
+#sticky-call {
+    position:fixed; bottom:20px; left:20px;
+    background:#00c853; color:white;
+    padding:15px 20px; border-radius:50px;
+    text-decoration:none;
+}
+#sticky-contact {
+    position:fixed; bottom:20px; right:20px;
+    background:#0078D7; color:white;
+    padding:15px 20px; border-radius:50px;
+    text-decoration:none;
+}
+
+footer { text-align:center; padding:20px; background:#eee; }
 </style>
 </head>
 
@@ -149,19 +116,9 @@ footer {
 <header>
     <h1>Serwis Hansgrohe Kraków – Naprawa i Montaż</h1>
     <p>Naprawa • Montaż • Części • Geberit • Grohe</p>
-
     <a href="#kontakt" class="hero-btn">Formularz</a>
     <a href="tel:+48123456789" class="call-btn">📞 Zadzwoń teraz</a>
 </header>
-
-<section>
-    <h2>Profesjonalny serwis Hansgrohe</h2>
-    <img src="serwis-hansgrohe-krakow.jpg" alt="Serwis Hansgrohe Kraków">
-
-    <p style="text-align:center;">
-        Serwis Hansgrohe Kraków – naprawa, montaż i wymiana części. Obsługujemy Geberit i Grohe.
-    </p>
-</section>
 
 <section>
     <h2>Nasze usługi</h2>
@@ -174,29 +131,50 @@ footer {
 </section>
 
 <section>
-    <h2>Serwis Hansgrohe Kraków i okolice</h2>
-    <p style="text-align:center;">
-        Działamy na terenie Krakowa i Małopolski. Szybki dojazd i naprawa na miejscu.
-    </p>
+    <h2>Galeria realizacji</h2>
+    <div class="gallery">
+        <img src="serwis-hansgrohe-krakow.jpg">
+        <img src="serwis-hansgrohe-krakow.jpg">
+        <img src="serwis-hansgrohe-krakow.jpg">
+    </div>
+</section>
+
+<section>
+    <h2>Opinie klientów</h2>
+    <div class="reviews">
+        <div class="review">⭐⭐⭐⭐⭐ Szybka naprawa, polecam!</div>
+        <div class="review">⭐⭐⭐⭐⭐ Fachowa obsługa i szybki termin</div>
+        <div class="review">⭐⭐⭐⭐⭐ Wszystko działa idealnie</div>
+    </div>
+</section>
+
+<section>
+    <h2>Najczęstsze pytania</h2>
+    <div class="faq-item"><b>Ile kosztuje naprawa?</b><br>Każda wycena indywidualna – skontaktuj się.</div>
+    <div class="faq-item"><b>Czy dojeżdżacie do klienta?</b><br>Tak, działamy w Krakowie i okolicach.</div>
+    <div class="faq-item"><b>Jak szybko realizacja?</b><br>Najczęściej w ciągu 1–2 dni.</div>
+</section>
+
+<section>
+    <h2>Obszar działania</h2>
+    <iframe src="https://www.google.com/maps?q=Krakow&output=embed"></iframe>
 </section>
 
 <section id="kontakt">
     <h2>Kontakt</h2>
-    <div class="contact-form">
-        <form onsubmit="sendEmail(event)">
-            <input type="text" name="name" placeholder="Imię i nazwisko" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Wiadomość" required></textarea>
-            <button type="submit">Wyślij</button>
-        </form>
-    </div>
+    <form onsubmit="sendEmail(event)">
+        <input type="text" name="name" placeholder="Imię i nazwisko" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Wiadomość" required></textarea>
+        <button type="submit">Wyślij</button>
+    </form>
 </section>
 
-<a href="tel:+48 660 469 203" id="sticky-call">📞 Zadzwoń</a>
+<a href="tel:+48123456789" id="sticky-call">📞 Zadzwoń</a>
 <a href="#kontakt" id="sticky-contact">Kontakt</a>
 
 <footer>
-    © 2026 Serwis Hansgrohe Kraków – Tomasz Jarosz
+© 2026 Serwis Hansgrohe Kraków – Tomasz Jarosz
 </footer>
 
 <script>
