@@ -7,7 +7,6 @@
 <title>Serwis Hansgrohe Kraków | Naprawa, Montaż, Geberit, Grohe – Szybkie terminy</title>
 
 <meta name="description" content="Serwis Hansgrohe Kraków – naprawa, montaż i części. Obsługujemy Geberit i Grohe. Szybkie terminy, fachowa obsługa. Zadzwoń i umów wizytę!">
-<meta name="keywords" content="serwis hansgrohe kraków, naprawa hansgrohe kraków, geberit serwis kraków, grohe serwis małopolska, montaż armatury kraków">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -19,6 +18,7 @@ body {
     color: #333;
 }
 
+/* HEADER */
 header {
     background: linear-gradient(135deg, #0078D7, #005ea1);
     color: white;
@@ -26,21 +26,30 @@ header {
     padding: 80px 20px;
 }
 
-header h1 {
-    font-size: 2.8em;
-}
+header h1 { font-size: 2.8em; }
 
-.hero-btn {
+/* BUTTONY */
+.hero-btn, .call-btn {
     display: inline-block;
     margin-top: 20px;
     padding: 15px 30px;
-    background: white;
-    color: #0078D7;
-    text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
+    text-decoration: none;
 }
 
+.hero-btn {
+    background: white;
+    color: #0078D7;
+}
+
+.call-btn {
+    background: #00c853;
+    color: white;
+    margin-left: 10px;
+}
+
+/* SEKCJE */
 section {
     max-width: 1100px;
     margin: auto;
@@ -52,19 +61,28 @@ h2 {
     color:#0078D7;
 }
 
+/* KARTY – PREMIUM HOVER */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 20px;
     text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* OBRAZ */
 img {
     width: 100%;
     max-width: 700px;
@@ -73,6 +91,7 @@ img {
     border-radius: 15px;
 }
 
+/* FORMULARZ */
 .contact-form {
     max-width: 500px;
     margin: auto;
@@ -92,17 +111,31 @@ img {
     border: none;
 }
 
+/* STICKY TELEFON */
+#sticky-call {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #00c853;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 #sticky-contact {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: #0078D7;
     color: white;
-    padding: 15px;
-    border-radius: 30px;
+    padding: 15px 20px;
+    border-radius: 50px;
     text-decoration: none;
 }
 
+/* STOPKA */
 footer {
     text-align:center;
     padding:20px;
@@ -116,19 +149,17 @@ footer {
 <header>
     <h1>Serwis Hansgrohe Kraków – Naprawa i Montaż</h1>
     <p>Naprawa • Montaż • Części • Geberit • Grohe</p>
-    <a href="#kontakt" class="hero-btn">Skontaktuj się</a>
+
+    <a href="#kontakt" class="hero-btn">Formularz</a>
+    <a href="tel:+48123456789" class="call-btn">📞 Zadzwoń teraz</a>
 </header>
 
 <section>
     <h2>Profesjonalny serwis Hansgrohe</h2>
     <img src="serwis-hansgrohe-krakow.jpg" alt="Serwis Hansgrohe Kraków">
-    
-    <p style="text-align:center;">
-        Autoryzowany serwis Hansgrohe w Krakowie i Małopolsce. Naprawa, montaż i wymiana części. Obsługujemy Geberit i Grohe.
-    </p>
 
-    <p style="text-align:center; max-width:800px; margin:auto;">
-        Profesjonalny serwis Hansgrohe w Krakowie i Małopolsce. Specjalizujemy się w naprawie baterii, montażu armatury oraz wymianie części. Obsługujemy również systemy Geberit i Grohe. Gwarantujemy szybkie terminy i rzetelną obsługę.
+    <p style="text-align:center;">
+        Serwis Hansgrohe Kraków – naprawa, montaż i wymiana części. Obsługujemy Geberit i Grohe.
     </p>
 </section>
 
@@ -145,18 +176,8 @@ footer {
 <section>
     <h2>Serwis Hansgrohe Kraków i okolice</h2>
     <p style="text-align:center;">
-        Działamy na terenie Krakowa i całej Małopolski – Podgórze, Nowa Huta, Krowodrza, Bronowice i okolice. Dojeżdżamy do klienta i realizujemy naprawy na miejscu.
+        Działamy na terenie Krakowa i Małopolski. Szybki dojazd i naprawa na miejscu.
     </p>
-</section>
-
-<section>
-    <h2>Obszar działania</h2>
-    <p style="text-align:center;">Kraków i Małopolska</p>
-    <iframe 
-        src="https://www.google.com/maps?q=Krakow&output=embed"
-        width="100%" 
-        height="300">
-    </iframe>
 </section>
 
 <section id="kontakt">
@@ -171,6 +192,7 @@ footer {
     </div>
 </section>
 
+<a href="tel:+48 660 469 203" id="sticky-call">📞 Zadzwoń</a>
 <a href="#kontakt" id="sticky-contact">Kontakt</a>
 
 <footer>
@@ -181,11 +203,8 @@ footer {
 function sendEmail(event){
     event.preventDefault();
     const form = event.target;
-
-    const subject = encodeURIComponent("Kontakt ze strony");
     const body = encodeURIComponent(form.message.value);
-
-    window.location.href = `mailto:kontakt@serwis-hansgrohe.pl?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:kontakt@serwis-hansgrohe.pl?body=${body}`;
 }
 </script>
 
