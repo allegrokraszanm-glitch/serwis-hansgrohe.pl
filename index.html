@@ -5,10 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Serwis Hansgrohe Kraków – Naprawa, Montaż, Geberit, Grohe</title>
-<meta name="description" content="Autoryzowany serwis Hansgrohe w Krakowie – naprawa, montaż, części. Obsługujemy Geberit i Grohe. Skontaktuj się z nami.">
+
 <meta name="description" content="Serwis Hansgrohe w Krakowie – naprawa, montaż i części. Obsługujemy Geberit i Grohe. Szybkie terminy, profesjonalna obsługa. Zadzwoń i umów serwis.">
 <meta name="keywords" content="serwis hansgrohe kraków, naprawa hansgrohe kraków, geberit serwis kraków, grohe serwis małopolska, montaż armatury kraków">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
@@ -19,25 +20,26 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Nagłówek z paralaksą */
-header
-       background: linear-gradient(135deg, #0078D7, #005ea1);
+/* Nagłówek */
+header {
+    background: linear-gradient(135deg, #0078D7, #005ea1);
     color: white;
     text-align: center;
     padding: 80px 20px;
     position: relative;
     overflow: hidden;
 }
+
 header h1 {
     font-size: 2.8em;
     margin-bottom: 15px;
-    animation: fadeDown 1s ease forwards;
 }
+
 header p {
     font-size: 1.2em;
     opacity: 0.9;
-    animation: fadeUp 1s ease forwards;
 }
+
 .hero-btn {
     display: inline-block;
     margin-top: 25px;
@@ -47,62 +49,56 @@ header p {
     text-decoration: none;
     border-radius: 35px;
     font-weight: bold;
-    transition: 0.3s, transform 0.2s;
+    transition: 0.3s;
 }
-.hero-btn:hover { background: #f0f0f0; transform: scale(1.05); }
-
-/* Animacje fadeIn */
-@keyframes fadeDown { from {opacity:0; transform:translateY(-30px);} to {opacity:1; transform:translateY(0);} }
-@keyframes fadeUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
+.hero-btn:hover {
+    background: #f0f0f0;
+}
 
 /* Sekcje */
 section {
     max-width: 1100px;
     margin: auto;
     padding: 60px 20px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
 }
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-h2 { text-align:center; margin-bottom:30px; font-weight:600; color:#0078D7; }
 
-/* Karty usług z mikroanimacją */
+h2 {
+    text-align:center;
+    margin-bottom:30px;
+    font-weight:600;
+    color:#0078D7;
+}
+
+/* Karty */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
+
 .card {
     background: white;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.1);
     text-align: center;
-    transition: 0.3s, transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
-}
-.card:hover {
-    transform: translateY(-12px) scale(1.07);
-    box-shadow: 0 15px 45px rgba(0,0,0,0.2);
-    background: linear-gradient(135deg, #e6f0fa, #ffffff);
+    transition: 0.3s;
 }
 
-/* Obrazki z paralaksą */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Obraz */
 img.main-img {
     width: 100%;
     max-width: 750px;
     display: block;
     margin: 30px auto;
     border-radius: 20px;
-    transition: transform 0.5s ease;
 }
-img.main-img:hover { transform: scale(1.03); }
 
-/* Formularz kontaktowy premium */
+/* Formularz */
 .contact-form {
     max-width: 600px;
     margin: auto;
@@ -111,64 +107,57 @@ img.main-img:hover { transform: scale(1.03); }
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
-.contact-form input, .contact-form textarea, .contact-form button {
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
     width: 100%;
-    padding: 14px 15px;
-    margin: 12px 0;
-    border-radius: 12px;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 10px;
     border: 1px solid #ccc;
-    font-size: 1em;
-    transition: 0.3s, box-shadow 0.3s;
 }
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #0078D7;
-    box-shadow: 0 0 8px rgba(0,120,215,0.4);
-}
+
 .contact-form button {
     background: #0078D7;
     color: white;
     border: none;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s, transform 0.2s, box-shadow 0.3s;
 }
+
 .contact-form button:hover {
     background: #005ea1;
-    transform: scale(1.05);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-/* Sticky CTA premium */
+/* Sticky */
 #sticky-contact {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 20px;
+    right: 20px;
     background: #0078D7;
     color: white;
-    padding: 18px 25px;
+    padding: 15px 20px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 6px 25px rgba(0,0,0,0.35);
-    transition: 0.3s, transform 0.2s;
-    z-index: 100;
 }
-#sticky-contact:hover { background: #005ea1; transform: scale(1.1); }
 
 /* Stopka */
-footer { text-align:center; padding:25px; background:#eee; font-size:0.9em; }
+footer {
+    text-align:center;
+    padding:25px;
+    background:#eee;
+}
 
-/* iframe mapy */
-iframe { border-radius:20px; transition: transform 0.3s; }
-iframe:hover { transform: scale(1.02); }
-
+iframe {
+    border-radius: 20px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Serwis Hansgrohe Kraków</h1>
+    <h1>Serwis Hansgrohe Kraków – Naprawa i Montaż</h1>
     <p>Naprawa • Montaż • Części • Geberit • Grohe</p>
     <a href="#kontakt" class="hero-btn">Skontaktuj się</a>
 </header>
@@ -177,7 +166,7 @@ iframe:hover { transform: scale(1.02); }
     <h2>Profesjonalny serwis Hansgrohe</h2>
     <img src="serwis-hansgrohe-krakow.jpg" class="main-img" alt="Serwis Hansgrohe Kraków">
     <p style="text-align:center;">
-        Autoryzowany serwis Hansgrohe w Krakowie i Małopolsce. Naprawa, montaż i wymiana części do systemów sanitarnych. Obsługujemy również Geberit i Grohe.
+        Autoryzowany serwis Hansgrohe w Krakowie i Małopolsce. Naprawa, montaż i wymiana części. Obsługujemy Geberit i Grohe.
     </p>
 </section>
 
@@ -186,78 +175,48 @@ iframe:hover { transform: scale(1.02); }
     <div class="services">
         <div class="card">🔧 Naprawa baterii Hansgrohe</div>
         <div class="card">🚿 Montaż armatury</div>
-        <div class="card">🧰 Wymiana części i konserwacja</div>
+        <div class="card">🧰 Wymiana części</div>
         <div class="card">💧 Serwis Geberit i Grohe</div>
     </div>
 </section>
 
 <section>
-    <h2>Dlaczego warto nas wybrać?</h2>
-    <div class="services">
-        <div class="card">✔ Doświadczenie</div>
-        <div class="card">✔ Szybkie terminy</div>
-        <div class="card">✔ Profesjonalizm</div>
-        <div class="card">✔ Autoryzowany serwis</div>
-    </div>
-</section>
-
-<section>
     <h2>Obszar działania</h2>
-    <p style="text-align:center;">Kraków i okolice: Podgórze, Nowa Huta, Krowodrza, Bronowice</p>
+    <p style="text-align:center;">Kraków i Małopolska</p>
     <iframe 
         src="https://www.google.com/maps?q=Krakow&output=embed"
         width="100%" 
-        height="350" 
-        loading="lazy">
+        height="350">
     </iframe>
 </section>
 
 <section id="kontakt">
-    <h2>Skontaktuj się z nami</h2>
+    <h2>Kontakt</h2>
     <div class="contact-form">
         <form onsubmit="sendEmail(event)">
-            <input type="text" name="name" placeholder="Twoje imię i nazwisko" required>
-            <input type="email" name="email" placeholder="Twój email" required>
-            <input type="tel" name="phone" placeholder="Twój telefon">
-            <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
-            <button type="submit">Wyślij wiadomość</button>
+            <input type="text" name="name" placeholder="Imię i nazwisko" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Wiadomość" required></textarea>
+            <button type="submit">Wyślij</button>
         </form>
-        <p id="success" style="text-align:center; color:green; display:none;">Wiadomość została wysłana! 📩</p>
     </div>
 </section>
 
-<a href="#kontakt" id="sticky-contact">Kontakt 📩</a>
+<a href="#kontakt" id="sticky-contact">Kontakt</a>
 
 <footer>
     © 2026 Serwis Hansgrohe Kraków – Tomasz Jarosz
 </footer>
 
 <script>
-// Animacja przy scrollowaniu
-function revealSections() {
-    document.querySelectorAll('section').forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if(top < window.innerHeight - 100) sec.classList.add('visible');
-    });
-}
-window.addEventListener('scroll', revealSections);
-window.addEventListener('load', revealSections);
-
-// Formularz darmowy
 function sendEmail(event){
     event.preventDefault();
     const form = event.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const phone = form.phone.value;
-    const message = form.message.value;
 
-    const subject = encodeURIComponent("Kontakt ze strony – Serwis Hansgrohe Kraków");
-    const body = encodeURIComponent(`Imię i nazwisko: ${name}\nEmail: ${email}\nTelefon: ${phone}\nWiadomość:\n${message}`);
+    const subject = encodeURIComponent("Kontakt ze strony");
+    const body = encodeURIComponent(form.message.value);
+
     window.location.href = `mailto:kontakt@serwis-hansgrohe.pl?subject=${subject}&body=${body}`;
-
-    document.getElementById("success").style.display = "block";
-    form.reset();
 }
 </script>
 
