@@ -5,12 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Serwis Hansgrohe Kraków | Naprawa, Montaż, Geberit, Grohe</title>
-<meta name="description" content="Autoryzowany serwis Hansgrohe w Krakowie – Tomasz Jarosz, tel. 660-469-203, e-mail: jarosztom@wp.pl. Naprawa, montaż, części. Obsługujemy Geberit i Grohe. Szybkie terminy, fachowa obsługa. Zadzwoń i umów wizytę!">
+<meta name="description" content="Autoryzowany serwis Hansgrohe w Krakowie – Tomasz Jarosz, tel. 660-469-203. Naprawa, montaż, części. Geberit i Grohe.">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/favicon-180.png">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -24,20 +21,34 @@ header {
     padding:60px 20px 30px 20px;
 }
 header h1 { font-size:2.5em; margin-bottom:10px; }
-header p { font-size:1.1em; opacity:0.9; }
 
-.hero-btn, .call-btn, .shop-btn {
+.hero-btn, .call-btn, .shop-btn, .fb-btn {
     display:inline-block;
     margin-top:20px;
     padding:15px 30px;
     border-radius:30px;
     font-weight:bold;
     text-decoration:none;
+    transition:0.3s;
 }
 
 .hero-btn { background:white; color:#0078D7; }
 .call-btn { background:#00c853; color:white; margin-left:10px; }
 .shop-btn { background:#ff9800; color:white; margin-left:10px; }
+
+.fb-btn {
+    background:#1877f2;
+    color:white;
+    margin-left:10px;
+}
+
+.hero-btn:hover,
+.call-btn:hover,
+.shop-btn:hover,
+.fb-btn:hover {
+    transform:scale(1.05);
+    opacity:0.9;
+}
 
 .hero-img {
     width:100%;
@@ -55,6 +66,7 @@ h2 { text-align:center; color:#0078D7; margin-bottom:30px; }
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
+
 .card {
     background:white;
     padding:25px;
@@ -62,21 +74,32 @@ h2 { text-align:center; color:#0078D7; margin-bottom:30px; }
     text-align:center;
     box-shadow:0 8px 25px rgba(0,0,0,0.1);
     transition:0.3s;
-    cursor:pointer;
 }
+
 .card:hover {
-    transform:translateY(-12px) scale(1.05);
-    box-shadow:0 20px 50px rgba(0,0,0,0.2);
+    transform:translateY(-10px);
 }
 
 .reviews { display:grid; gap:20px; }
-.review { background:white; padding:20px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1); }
 
-.faq-item { background:white; margin:10px 0; padding:15px; border-radius:10px; }
+.review {
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.faq-item {
+    background:white;
+    margin:10px 0;
+    padding:15px;
+    border-radius:10px;
+}
 
 iframe { width:100%; height:300px; border-radius:15px; }
 
 .contact-form { max-width:500px; margin:auto; }
+
 .contact-form input, .contact-form textarea, .contact-form button {
     width:100%;
     padding:12px;
@@ -84,19 +107,67 @@ iframe { width:100%; height:300px; border-radius:15px; }
     border-radius:10px;
     border:1px solid #ccc;
 }
+
 .contact-form button {
     background:#0078D7;
     color:white;
     border:none;
     cursor:pointer;
-    font-weight:bold;
 }
+
 .contact-form button:hover { background:#005ea1; }
 
-#sticky-call { position:fixed; bottom:20px; left:20px; background:#00c853; color:white; padding:15px 20px; border-radius:50px; text-decoration:none; }
-#sticky-contact { position:fixed; bottom:20px; right:20px; background:#0078D7; color:white; padding:15px 20px; border-radius:50px; text-decoration:none; }
-#sticky-shop { position:fixed; bottom:80px; right:20px; background:#ff9800; color:white; padding:15px 20px; border-radius:50px; text-decoration:none; }
+/* Sticky buttons */
+#sticky-call {
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    background:#00c853;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+}
 
+#sticky-contact {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#0078D7;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+}
+
+#sticky-shop {
+    position:fixed;
+    bottom:80px;
+    right:20px;
+    background:#ff9800;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+}
+
+/* Facebook sticky */
+#sticky-fb {
+    position:fixed;
+    bottom:140px;
+    right:20px;
+    background:#1877f2;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#sticky-fb:hover {
+    transform:scale(1.05);
+    opacity:0.9;
+}
 </style>
 </head>
 
@@ -107,11 +178,16 @@ iframe { width:100%; height:300px; border-radius:15px; }
     <p>Naprawa • Montaż • Części • Geberit • Grohe</p>
 
     <a href="#kontakt" class="hero-btn">Formularz</a>
-    <a href="tel:+48123456789" class="call-btn">📞 Zadzwoń teraz</a>
-    <a href="http://www.springspa.pl" target="_blank" class="shop-btn">🛒 Sklep online</a>
+    <a href="tel:+48660469203" class="call-btn">📞 Zadzwoń</a>
+    <a href="http://www.springspa.pl" target="_blank" class="shop-btn">🛒 Sklep</a>
+
+    <!-- FACEBOOK BUTTON -->
+    <a href="https://www.facebook.com/profile.php?id=61570691483438" target="_blank" class="fb-btn">
+        📘 Facebook
+    </a>
 </header>
 
-<img src="serwis-hansgrohe-krakow.jpg" class="hero-img" alt="Serwis Hansgrohe Kraków">
+<img src="serwis-hansgrohe-krakow.jpg" class="hero-img">
 
 <section>
     <h2>Nasze usługi</h2>
@@ -127,16 +203,9 @@ iframe { width:100%; height:300px; border-radius:15px; }
     <h2>Opinie klientów</h2>
     <div class="reviews">
         <div class="review">⭐⭐⭐⭐⭐ Szybka naprawa, polecam!</div>
-        <div class="review">⭐⭐⭐⭐⭐ Fachowa obsługa i szybki termin</div>
+        <div class="review">⭐⭐⭐⭐⭐ Fachowa obsługa</div>
         <div class="review">⭐⭐⭐⭐⭐ Wszystko działa idealnie</div>
     </div>
-</section>
-
-<section>
-    <h2>Najczęstsze pytania</h2>
-    <div class="faq-item"><b>Ile kosztuje naprawa?</b><br>Każda wycena indywidualna – skontaktuj się.</div>
-    <div class="faq-item"><b>Czy dojeżdżacie do klienta?</b><br>Tak, działamy w Krakowie i okolicach.</div>
-    <div class="faq-item"><b>Jak szybko realizacja?</b><br>Najczęściej w ciągu 1–2 dni.</div>
 </section>
 
 <section>
@@ -156,11 +225,17 @@ iframe { width:100%; height:300px; border-radius:15px; }
     </div>
 </section>
 
-<a href="tel:+48 660-469-203" id="sticky-call">📞 Zadzwoń</a>
+<!-- STICKY BUTTONS -->
+<a href="tel:+48660469203" id="sticky-call">📞 Zadzwoń</a>
 <a href="#kontakt" id="sticky-contact">Kontakt</a>
 <a href="http://www.springspa.pl" target="_blank" id="sticky-shop">🛒 Sklep</a>
 
-<footer>
+<!-- FACEBOOK STICKY -->
+<a href="https://www.facebook.com/profile.php?id=61570691483438" target="_blank" id="sticky-fb">
+    📘 Facebook
+</a>
+
+<footer style="text-align:center;padding:20px;">
 © 2026 Serwis Hansgrohe Kraków – Tomasz Jarosz
 </footer>
 
@@ -168,7 +243,9 @@ iframe { width:100%; height:300px; border-radius:15px; }
 function sendEmail(event){
     event.preventDefault();
     const form = event.target;
-    const body = encodeURIComponent(`Imię i nazwisko: ${form.name.value}\nEmail: ${form.email.value}\nWiadomość:\n${form.message.value}`);
+    const body = encodeURIComponent(
+        `Imię i nazwisko: ${form.name.value}\nEmail: ${form.email.value}\nWiadomość:\n${form.message.value}`
+    );
     window.location.href = `mailto:kontakt@serwis-hansgrohe.pl?body=${body}`;
 }
 </script>
