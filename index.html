@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Serwis Hansgrohe Kraków | Naprawa Grohe, Geberit – Fachowy serwis</title>
+<title>Serwis Hansgrohe Kraków | Naprawa Grohe, Geberit</title>
 
-<meta name="description" content="Serwis Hansgrohe Kraków – naprawa baterii, Grohe, Geberit. Szybki dojazd, oryginalne części, fachowa obsługa. Zadzwoń 660-469-203.">
+<meta name="description" content="Serwis Hansgrohe Kraków – naprawa baterii, Grohe, Geberit. Szybki dojazd, fachowa obsługa. Zadzwoń 660-469-203.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -17,34 +17,42 @@ header {
     background: linear-gradient(135deg, #0078D7, #005ea1);
     color:white;
     text-align:center;
-    padding:60px 20px 30px;
+    padding:60px 20px 40px;
 }
 
-header h1 { font-size:2.2em; }
+header h1 { font-size:2.2em; margin-bottom:10px; }
 
 .hero-btn, .call-btn, .shop-btn, .fb-btn {
     display:inline-block;
-    margin-top:20px;
-    padding:15px 25px;
+    margin-top:15px;
+    padding:14px 24px;
     border-radius:30px;
     font-weight:bold;
     text-decoration:none;
     transition:0.3s;
 }
 
-.hero-btn { background:white; color:#0078D7; }
-.call-btn { background:#00c853; color:white; margin-left:10px; }
+.call-btn { background:#00c853; color:white; }
 .shop-btn { background:#ff9800; color:white; margin-left:10px; }
 .fb-btn { background:#1877f2; color:white; margin-left:10px; }
 
-.hero-btn:hover, .call-btn:hover, .shop-btn:hover, .fb-btn:hover {
+.call-btn:hover, .shop-btn:hover, .fb-btn:hover {
     transform:scale(1.05);
 }
 
 section { max-width:1100px; margin:auto; padding:60px 20px; }
-h2 { text-align:center; color:#0078D7; }
 
-/* usługi */
+h2 { text-align:center; color:#0078D7; margin-bottom:30px; }
+
+/* BOX */
+.section-box {
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* USŁUGI */
 .services {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -57,11 +65,16 @@ h2 { text-align:center; color:#0078D7; }
     border-radius:20px;
     text-align:center;
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
-/* opinie */
+.card:hover {
+    transform:translateY(-5px);
+}
+
+/* OPINIE */
 .rating-box { text-align:center; margin-bottom:30px; }
-.score { font-size:38px; color:#ff9800; }
+.score { font-size:36px; color:#ff9800; }
 
 .reviews {
     display:grid;
@@ -76,31 +89,14 @@ h2 { text-align:center; color:#0078D7; }
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* mapa */
+/* MAPA */
 iframe {
     width:100%;
     height:300px;
     border-radius:15px;
 }
 
-/* formularz */
-form { max-width:500px; margin:auto; }
-
-input, textarea, button {
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border-radius:10px;
-    border:1px solid #ccc;
-}
-
-button {
-    background:#0078D7;
-    color:white;
-    border:none;
-}
-
-/* sticky */
+/* STICKY */
 #sticky-call {
     position:fixed;
     bottom:20px;
@@ -124,7 +120,7 @@ button {
 }
 </style>
 
-<!-- SEO lokalne -->
+<!-- SEO -->
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -136,8 +132,7 @@ button {
 "addressLocality": "Kraków",
 "addressCountry": "PL"
 },
-"areaServed": "Kraków",
-"url": "https://serwis-hansgrohe.pl"
+"areaServed": "Kraków"
 }
 </script>
 
@@ -146,12 +141,8 @@ button {
 <body>
 
 <header>
-<h1>Serwis Hansgrohe Kraków – Naprawa baterii, Grohe, Geberit</h1>
-
-<p>
-Specjalistyczny serwis armatury premium w Krakowie.
-Naprawa, montaż i części do baterii Hansgrohe, Grohe oraz Geberit.
-</p>
+<h1>Serwis Hansgrohe Kraków – Naprawa Grohe i Geberit</h1>
+<p>Specjalistyczny serwis armatury premium w Krakowie</p>
 
 <a href="tel:+48660469203" class="call-btn">📞 Zadzwoń</a>
 <a href="http://www.springspa.pl" target="_blank" class="shop-btn">🛒 Sklep</a>
@@ -159,24 +150,33 @@ Naprawa, montaż i części do baterii Hansgrohe, Grohe oraz Geberit.
 </header>
 
 <section>
+<div class="section-box">
+
 <h2>Profesjonalny serwis Hansgrohe, Grohe i Geberit</h2>
 
-<p>
-Oferujemy fachową naprawę baterii i systemów sanitarnych renomowanych marek:
-<strong>Hansgrohe, Grohe oraz Geberit</strong>.
-Dzięki doświadczeniu oraz dostępowi do oryginalnych części jesteśmy w stanie
-szybko i skutecznie usunąć usterki.
+<p>🔧 Naprawa baterii i armatury premium</p>
+<p>🚿 Montaż i serwis systemów podtynkowych</p>
+<p>⚙️ Oryginalne części i doświadczenie</p>
+
+<p style="margin-top:20px;">
+Dzięki doświadczeniu i dostępowi do oryginalnych części naprawy wykonujemy szybko i skutecznie.
+Działamy na terenie całego Krakowa – dojeżdżamy do klienta i usuwamy usterki na miejscu.
 </p>
 
-<p>
-Działamy na terenie całego Krakowa – dojeżdżamy do klienta i wykonujemy
-naprawy na miejscu. Obsługujemy klientów indywidualnych oraz firmy.
+<p style="margin-top:20px;">
+<strong>Obsługiwane marki:</strong><br>
+<span style="color:#0078D7;font-weight:600;">
+Hansgrohe • Grohe • Geberit
+</span>
 </p>
 
-<p>
-Obsługiwane marki:
-<strong>Hansgrohe, Grohe, Geberit, Gessi, Duravit, Villero&Boch </strong>
-</p>
+<div style="text-align:center;margin-top:30px;">
+<a href="tel:+48660469203" class="call-btn">
+📞 Zadzwoń – szybka pomoc
+</a>
+</div>
+
+</div>
 </section>
 
 <section>
@@ -185,7 +185,7 @@ Obsługiwane marki:
 <div class="card">🔧 Naprawa baterii Hansgrohe</div>
 <div class="card">🚿 Montaż armatury</div>
 <div class="card">🧰 Wymiana części</div>
-<div class="card">💧 Serwis Geberit i Grohe</div>
+<div class="card">💧 Serwis Grohe i Geberit</div>
 </div>
 </section>
 
@@ -198,14 +198,16 @@ Obsługiwane marki:
 </div>
 
 <div class="reviews">
-<div class="review">Świetny fachowiec, szybka naprawa. – Anna K.</div>
-<div class="review">Profesjonalne podejście i dobry kontakt. – Marek P.</div>
-<div class="review">Wszystko działa idealnie. Polecam. – Katarzyna W.</div>
+<div class="review">Szybka naprawa i profesjonalne podejście. – Anna K.</div>
+<div class="review">Fachowiec godny polecenia. – Marek P.</div>
+<div class="review">Wszystko działa idealnie. – Katarzyna W.</div>
 </div>
 
+<div style="text-align:center;margin-top:25px;">
 <a href="https://www.facebook.com/profile.php?id=61570691483438&sk=reviews" target="_blank" class="fb-btn">
 ⭐ Zobacz więcej opinii / Dodaj swoją
 </a>
+</div>
 
 </section>
 
@@ -214,10 +216,13 @@ Obsługiwane marki:
 <iframe src="https://www.google.com/maps?q=Krakow&output=embed"></iframe>
 </section>
 
-<section id="kontakt">
+<section>
 <h2>Kontakt</h2>
-<p>Zadzwoń i umów wizytę:</p>
+<p style="text-align:center;">Zadzwoń i umów wizytę:</p>
+
+<div style="text-align:center;margin-top:20px;">
 <a href="tel:+48660469203" class="call-btn">📞 660 469 203</a>
+</div>
 </section>
 
 <a href="tel:+48660469203" id="sticky-call">📞</a>
