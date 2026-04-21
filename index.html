@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Serwis Hansgrohe Kraków | Naprawa, Montaż, Geberit, Grohe</title>
-<meta name="description" content="Autoryzowany serwis Hansgrohe w Krakowie – Tomasz Jarosz, tel. 660-469-203. Naprawa, montaż, części. Geberit i Grohe.">
-
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="description" content="Serwis Hansgrohe Kraków – naprawa, montaż, części. Sprawdź opinie klientów i umów wizytę.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -18,9 +16,8 @@ header {
     background: linear-gradient(135deg, #0078D7, #005ea1);
     color:white;
     text-align:center;
-    padding:60px 20px 30px 20px;
+    padding:60px 20px 30px;
 }
-header h1 { font-size:2.5em; margin-bottom:10px; }
 
 .hero-btn, .call-btn, .shop-btn, .fb-btn {
     display:inline-block;
@@ -33,38 +30,21 @@ header h1 { font-size:2.5em; margin-bottom:10px; }
 }
 
 .hero-btn { background:white; color:#0078D7; }
-.call-btn { background:#00c853; color:white; margin-left:10px; }
-.shop-btn { background:#ff9800; color:white; margin-left:10px; }
+.call-btn { background:#00c853; color:white; }
+.shop-btn { background:#ff9800; color:white; }
+.fb-btn { background:#1877f2; color:white; }
 
-.fb-btn {
-    background:#1877f2;
-    color:white;
-    margin-left:10px;
-}
-
-.hero-btn:hover,
-.call-btn:hover,
-.shop-btn:hover,
-.fb-btn:hover {
+.hero-btn:hover, .call-btn:hover, .shop-btn:hover, .fb-btn:hover {
     transform:scale(1.05);
-    opacity:0.9;
-}
-
-.hero-img {
-    width:100%;
-    max-width:900px;
-    display:block;
-    margin:30px auto;
-    border-radius:20px;
 }
 
 section { max-width:1100px; margin:auto; padding:60px 20px; }
-h2 { text-align:center; color:#0078D7; margin-bottom:30px; }
+h2 { text-align:center; color:#0078D7; }
 
 .services {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+    gap:20px;
 }
 
 .card {
@@ -72,181 +52,133 @@ h2 { text-align:center; color:#0078D7; margin-bottom:30px; }
     padding:25px;
     border-radius:20px;
     text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.card:hover {
-    transform:translateY(-10px);
-}
-
-.reviews { display:grid; gap:20px; }
-
-.review {
-    background:white;
-    padding:20px;
-    border-radius:15px;
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-.faq-item {
-    background:white;
-    margin:10px 0;
-    padding:15px;
-    border-radius:10px;
+/* OPINIE */
+.reviews-box {
+    text-align:center;
 }
 
-iframe { width:100%; height:300px; border-radius:15px; }
-
-.contact-form { max-width:500px; margin:auto; }
-
-.contact-form input, .contact-form textarea, .contact-form button {
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border-radius:10px;
-    border:1px solid #ccc;
-}
-
-.contact-form button {
-    background:#0078D7;
-    color:white;
-    border:none;
-    cursor:pointer;
-}
-
-.contact-form button:hover { background:#005ea1; }
-
-/* Sticky buttons */
-#sticky-call {
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#00c853;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-}
-
-#sticky-contact {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#0078D7;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-}
-
-#sticky-shop {
-    position:fixed;
-    bottom:80px;
-    right:20px;
-    background:#ff9800;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-}
-
-/* Facebook sticky */
-#sticky-fb {
-    position:fixed;
-    bottom:140px;
-    right:20px;
+.fb-review-btn {
+    display:inline-block;
+    margin:20px 0;
+    padding:15px 25px;
     background:#1877f2;
     color:white;
-    padding:15px 20px;
-    border-radius:50px;
+    border-radius:30px;
     text-decoration:none;
     font-weight:bold;
 }
 
-#sticky-fb:hover {
+.fb-review-btn:hover {
     transform:scale(1.05);
-    opacity:0.9;
 }
+
+/* sticky */
+#sticky-call, #sticky-contact, #sticky-shop, #sticky-fb {
+    position:fixed;
+    right:20px;
+    padding:15px 20px;
+    border-radius:50px;
+    color:white;
+    text-decoration:none;
+}
+
+#sticky-call { bottom:20px; left:20px; background:#00c853; }
+#sticky-contact { bottom:20px; right:20px; background:#0078D7; }
+#sticky-shop { bottom:80px; right:20px; background:#ff9800; }
+#sticky-fb { bottom:140px; right:20px; background:#1877f2; }
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Serwis Hansgrohe Kraków – Naprawa i Montaż</h1>
-    <p>Naprawa • Montaż • Części • Geberit • Grohe</p>
+<h1>Serwis Hansgrohe Kraków</h1>
+<p>Naprawa • Montaż • Geberit • Grohe</p>
 
-    <a href="#kontakt" class="hero-btn">Formularz</a>
-    <a href="tel:+48660469203" class="call-btn">📞 Zadzwoń</a>
-    <a href="http://www.springspa.pl" target="_blank" class="shop-btn">🛒 Sklep</a>
-
-    <!-- FACEBOOK BUTTON -->
-    <a href="https://www.facebook.com/profile.php?id=61570691483438" target="_blank" class="fb-btn">
-        📘 Facebook
-    </a>
+<a href="#kontakt" class="hero-btn">Formularz</a>
+<a href="tel:+48660469203" class="call-btn">📞 Zadzwoń</a>
+<a href="http://www.springspa.pl" target="_blank" class="shop-btn">🛒 Sklep</a>
+<a href="https://www.facebook.com/profile.php?id=61570691483438" target="_blank" class="fb-btn">📘 Facebook</a>
 </header>
 
-<img src="serwis-hansgrohe-krakow.jpg" class="hero-img">
-
 <section>
-    <h2>Nasze usługi</h2>
-    <div class="services">
-        <div class="card">🔧 Naprawa baterii Hansgrohe</div>
-        <div class="card">🚿 Montaż armatury</div>
-        <div class="card">🧰 Wymiana części</div>
-        <div class="card">💧 Serwis Geberit i Grohe</div>
-    </div>
+<h2>Nasze usługi</h2>
+<div class="services">
+<div class="card">🔧 Naprawa baterii</div>
+<div class="card">🚿 Montaż</div>
+<div class="card">🧰 Wymiana części</div>
+<div class="card">💧 Geberit i Grohe</div>
+</div>
+</section>
+
+<!-- OPINIE -->
+<section>
+<h2>Opinie klientów</h2>
+
+<div class="reviews-box">
+
+<!-- PRZYCISK DODANIA OPINII -->
+<a href="https://www.facebook.com/profile.php?id=61570691483438&sk=reviews" target="_blank" class="fb-review-btn">
+⭐ Dodaj opinię na Facebooku
+</a>
+
+<!-- FACEBOOK WIDGET -->
+<div class="fb-page"
+     data-href="https://www.facebook.com/profile.php?id=61570691483438"
+     data-tabs="reviews"
+     data-width="500"
+     data-height="600"
+     data-small-header="false"
+     data-adapt-container-width="true"
+     data-hide-cover="false"
+     data-show-facepile="true">
+</div>
+
+</div>
 </section>
 
 <section>
-    <h2>Opinie klientów</h2>
-    <div class="reviews">
-        <div class="review">⭐⭐⭐⭐⭐ Szybka naprawa, polecam!</div>
-        <div class="review">⭐⭐⭐⭐⭐ Fachowa obsługa</div>
-        <div class="review">⭐⭐⭐⭐⭐ Wszystko działa idealnie</div>
-    </div>
-</section>
-
-<section>
-    <h2>Obszar działania</h2>
-    <iframe src="https://www.google.com/maps?q=Krakow&output=embed"></iframe>
+<h2>Obszar działania</h2>
+<iframe src="https://www.google.com/maps?q=Krakow&output=embed" width="100%" height="300"></iframe>
 </section>
 
 <section id="kontakt">
-    <h2>Kontakt</h2>
-    <div class="contact-form">
-        <form onsubmit="sendEmail(event)">
-            <input type="text" name="name" placeholder="Imię i nazwisko" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="Wiadomość" required></textarea>
-            <button type="submit">Wyślij</button>
-        </form>
-    </div>
+<h2>Kontakt</h2>
+<form onsubmit="sendEmail(event)">
+<input type="text" name="name" placeholder="Imię" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="message" placeholder="Wiadomość" required></textarea>
+<button type="submit">Wyślij</button>
+</form>
 </section>
 
-<!-- STICKY BUTTONS -->
-<a href="tel:+48660469203" id="sticky-call">📞 Zadzwoń</a>
-<a href="#kontakt" id="sticky-contact">Kontakt</a>
-<a href="http://www.springspa.pl" target="_blank" id="sticky-shop">🛒 Sklep</a>
-
-<!-- FACEBOOK STICKY -->
-<a href="https://www.facebook.com/profile.php?id=61570691483438" target="_blank" id="sticky-fb">
-    📘 Facebook
-</a>
+<!-- sticky -->
+<a href="tel:+48660469203" id="sticky-call">📞</a>
+<a href="#kontakt" id="sticky-contact">✉️</a>
+<a href="http://www.springspa.pl" target="_blank" id="sticky-shop">🛒</a>
+<a href="https://www.facebook.com/profile.php?id=61570691483438" target="_blank" id="sticky-fb">📘</a>
 
 <footer style="text-align:center;padding:20px;">
-© 2026 Serwis Hansgrohe Kraków – Tomasz Jarosz
+© 2026 Serwis Hansgrohe Kraków
 </footer>
+
+<!-- FB SDK -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v19.0">
+</script>
 
 <script>
 function sendEmail(event){
-    event.preventDefault();
-    const form = event.target;
-    const body = encodeURIComponent(
-        `Imię i nazwisko: ${form.name.value}\nEmail: ${form.email.value}\nWiadomość:\n${form.message.value}`
-    );
-    window.location.href = `mailto:kontakt@serwis-hansgrohe.pl?body=${body}`;
+event.preventDefault();
+const f = event.target;
+const body = encodeURIComponent(
+`Imię: ${f.name.value}\nEmail: ${f.email.value}\n${f.message.value}`
+);
+window.location.href = `mailto:kontakt@serwis-hansgrohe.pl?body=${body}`;
 }
 </script>
 
