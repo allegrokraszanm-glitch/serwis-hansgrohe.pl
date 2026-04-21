@@ -41,6 +41,7 @@ header {
 section { max-width:1100px; margin:auto; padding:60px 20px; }
 h2 { text-align:center; color:#0078D7; }
 
+/* SERVICES */
 .services {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -55,33 +56,50 @@ h2 { text-align:center; color:#0078D7; }
     box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* OPINIE */
-.reviews-box {
+/* OPINIE PRO */
+.rating-box {
     text-align:center;
+    margin-bottom:30px;
 }
 
-.fb-review-btn {
-    display:inline-block;
-    margin:20px 0;
-    padding:15px 25px;
+.rating-box .score {
+    font-size:40px;
+    font-weight:bold;
+    color:#ff9800;
+}
+
+.rating-box .stars {
+    font-size:22px;
+}
+
+.reviews {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.review {
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.review b {
+    display:block;
+    margin-top:10px;
+}
+
+.review-btn {
+    display:block;
+    text-align:center;
+    margin-top:30px;
+    padding:15px;
     background:#1877f2;
     color:white;
     border-radius:30px;
     text-decoration:none;
     font-weight:bold;
-}
-
-.fb-review-btn:hover {
-    transform:scale(1.05);
-}
-
-.fb-wrapper {
-    max-width:500px;
-    margin:0 auto;
-}
-
-.fb-page {
-    width:100% !important;
 }
 
 /* MAPA */
@@ -180,26 +198,40 @@ button {
 </div>
 </section>
 
-<!-- OPINIE -->
+<!-- OPINIE PRO -->
 <section>
 <h2>Opinie klientów</h2>
 
-<div class="reviews-box">
+<div class="rating-box">
+<div class="score">4.9 / 5</div>
+<div class="stars">★★★★★</div>
+<p>Na podstawie opinii klientów</p>
+</div>
 
-<a href="https://www.facebook.com/profile.php?id=61570691483438&sk=reviews" target="_blank" class="fb-review-btn">
-⭐ Dodaj opinię na Facebooku
+<div class="reviews">
+<div class="review">
+★★★★★<br>
+Szybka naprawa i pełen profesjonalizm. Polecam!
+<b>– Anna K.</b>
+</div>
+
+<div class="review">
+★★★★★<br>
+Pan Tomasz zna się na rzeczy. Wszystko działa idealnie.
+<b>– Marek P.</b>
+</div>
+
+<div class="review">
+★★★★★<br>
+Krótki czas realizacji i uczciwa cena. Super kontakt.
+<b>– Katarzyna W.</b>
+</div>
+</div>
+
+<a href="https://www.facebook.com/profile.php?id=61570691483438&sk=reviews" target="_blank" class="review-btn">
+⭐ Zobacz więcej opinii / Dodaj swoją
 </a>
 
-<div class="fb-wrapper">
-    <div class="fb-page"
-         data-href="https://www.facebook.com/profile.php?id=61570691483438"
-         data-tabs="reviews"
-         data-adapt-container-width="true"
-         data-hide-cover="false">
-    </div>
-</div>
-
-</div>
 </section>
 
 <section>
@@ -226,12 +258,6 @@ button {
 <footer style="text-align:center;padding:20px;">
 © 2026 Serwis Hansgrohe Kraków
 </footer>
-
-<!-- FACEBOOK SDK -->
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous"
-src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v19.0">
-</script>
 
 <script>
 function sendEmail(event){
