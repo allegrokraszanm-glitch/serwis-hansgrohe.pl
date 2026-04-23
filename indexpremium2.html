@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Serwis Hansgrohe, Grohe, Geberit Kraków | Naprawa Gessi, Huppe, Duravit</title>
+    <meta name="description" content="Profesjonalny serwis armatury premium w Krakowie. Naprawa Hansgrohe, Grohe, Geberit. Serwis kabin Huppe i New Trendy, baterii Gessi, Duravit, Villeroy & Boch. Szybki dojazd!">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0078D7;
+            --dark: #1a1a1a;
+            --accent: #00c853;
+            --bg-light: #f4f7f9;
+        }
+
+        body { font-family: 'Inter', sans-serif; margin:0; background: var(--bg-light); color: #333; line-height: 1.6; }
+
+        /* NAGŁÓWEK HERO */
+        header {
+            background: linear-gradient(rgba(0, 30, 60, 0.75), rgba(0, 30, 60, 0.85)), url('serwis-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .header-content { max-width: 900px; margin: auto; }
+        header h1 { font-size: 3em; margin-bottom: 20px; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+        header p { font-size: 1.3em; opacity: 1; margin-bottom: 35px; text-shadow: 0 1px 5px rgba(0,0,0,0.5); }
+
+        /* PRZYCISKI */
+        .btn-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .call-btn, .shop-btn {
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+        .call-btn { background: var(--accent); color: white; box-shadow: 0 4px 15px rgba(0,200,83,0.4); }
+        .shop-btn { background: white; color: var(--dark); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .call-btn:hover, .shop-btn:hover { transform: translateY(-3px); }
+
+        /* BRANDS BAR - KAFELKI */
+        .brands-section { background: white; padding: 40px 20px; border-bottom: 1px solid #eee; }
+        .brands-grid { 
+            max-width: 1100px; 
+            margin: auto; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+            gap: 20px; 
+            align-items: center;
+        }
+        .brand-tile {
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 700;
+            color: #555;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .brand-tile:hover { border-color: var(--primary); color: var(--primary); background: #f9f9f9; }
+
+        /* SEKCJE */
+        section { max-width: 1100px; margin: auto; padding: 70px 20px; }
+        h2 { text-align: center; color: var(--dark); margin-bottom: 40px; font-size: 2.2em; }
+        h2::after { content: ''; display: block; width: 60px; height: 4px; background: var(--primary); margin: 15px auto; }
+
+        .why-me { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 50px; }
+        .why-item { text-align: center; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .why-icon { font-size: 45px; margin-bottom: 15px; display: block; }
+
+        /* USŁUGI */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: white; padding: 35px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; }
+        .card h3 { color: var(--primary); margin-top: 0; font-size: 1.4em; }
+        .card ul { padding-left: 20px; }
+        .card ul li { margin-bottom: 8px; }
+
+        /* REVIEWS */
+        .review { background: #fff; padding: 30px; border-radius: 15px; border-left: 6px solid var(--accent); box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 25px; font-style: italic; }
+
+        /* MAPA */
+        .map-wrapper { width: 100%; height: 450px; border-radius: 25px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .map-wrapper iframe { width: 100%; height: 100%; border: 0; }
+
+        /* FOOTER & STICKY */
+        footer { background: var(--dark); color: white; text-align: center; padding: 50px 20px; }
+        #sticky-call { position: fixed; bottom: 25px; left: 25px; background: var(--accent); color: white; padding: 16px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 9999; }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            header p { font-size: 1.1em; }
+            .call-btn, .shop-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PlumbingService",
+      "name": "Serwis Hansgrohe Kraków - Tomasz Jarosz",
+      "telephone": "+48660469203",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kraków",
+        "addressRegion": "Małopolskie",
+        "addressCountry": "PL"
+      },
+      "areaServed": ["Kraków", "Wieliczka", "Skawina", "Niepołomice"]
+    }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Ekspercki Serwis Armatury Kraków</h1>
+        <p>Specjalistyczna naprawa marek premium: Hansgrohe, Grohe, Geberit, Gessi oraz serwis kabin Huppe i New Trendy.</p>
+        <div class="btn-container">
+            <a href="tel:+48660469203" class="call-btn">📞 Zadzwoń: 660 469 203</a>
+            <a href="http://www.springspa.pl" target="_blank" class="shop-btn">🛒 Sklep z częściami</a>
+        </div>
+    </div>
+</header>
+
+<div class="brands-section">
+    <div class="brands-grid">
+        <div class="brand-tile">Hansgrohe</div>
+        <div class="brand-tile">Grohe</div>
+        <div class="brand-tile">Geberit</div>
+        <div class="brand-tile">Gessi</div>
+        <div class="brand-tile">Huppe</div>
+        <div class="brand-tile">Duravit</div>
+        <div class="brand-tile">New Trendy</div>
+        <div class="brand-tile">V&B</div>
+    </div>
+</div>
+
+<section>
+    <div class="why-me">
+        <div class="why-item">
+            <span class="why-icon">🛡️</span>
+            <h3>Autoryzowana Wiedza</h3>
+            <p>Ekspercka znajomość budowy baterii termostatycznych i systemów podtynkowych.</p>
+        </div>
+        <div class="why-item">
+            <span class="why-icon">⚙️</span>
+            <h3>Oryginalne Części</h3>
+            <p>Tylko dedykowane uszczelki i głowice, co gwarantuje długowieczność naprawy.</p>
+        </div>
+        <div class="why-item">
+            <span class="why-icon">📍</span>
+            <h3>Dojazd do Klienta</h3>
+            <p>Szybkie terminy w Krakowie i okolicach. Większość usterek usuwam na miejscu.</p>
+        </div>
+    </div>
+
+    <div style="background: white; padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <h2>Profesjonalny serwis łazienkowy</h2>
+        <p>Twoja armatura premium wymaga precyzji. Specjalizuję się w <strong>serwisie Hansgrohe w Krakowie</strong>, naprawie systemów <strong>Grohe</strong> oraz kompleksowej obsłudze <strong>spłuczek Geberit</strong>. Obsługuję również luksusowe marki jak <strong>Gessi</strong>, ceramikę <strong>Duravit</strong> i <strong>Villeroy & Boch</strong>.</p>
+        <p>Zapewniam fachowy serwis kabin prysznicowych <strong>Huppe</strong> oraz <strong>New Trendy</strong>, dbając o ich szczelność i płynność mechanizmów.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Zakres usług</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Baterie i Termostaty</h3>
+            <ul>
+                <li>Serwis Hansgrohe, Grohe, Gessi</li>
+                <li>Wymiana głowic termostatycznych</li>
+                <li>Kalibracja temperatury wody</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Systemy Podtynkowe</h3>
+            <ul>
+                <li>Naprawa spłuczek Geberit (wszystkie modele)</li>
+                <li>Wymiana zaworów napełniających i spustowych</li>
+                <li>Doszczelnianie stelaży WC</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Kabiny i Prysznice</h3>
+            <ul>
+                <li>Serwis kabin Huppe i New Trendy</li>
+                <li>Wymiana uszczelek magnetycznych</li>
+                <li>Regulacja i serwis rolek</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Zadowoleni Klienci</h2>
+    <div class="review">
+        "Szybka pomoc przy cieknącej spłuczce Geberit. Pan Tomasz posiadał wszystkie części przy sobie. Bardzo polecam za fachowość i czystą pracę."
+        <br><strong>– Andrzej, Kraków</strong>
+    </div>
+    <div class="review">
+        "Naprawa baterii Hansgrohe przebiegła błyskawicznie. Profesjonalne narzędzia i podejście. Cena adekwatna do wysokiej jakości usługi."
+        <br><strong>– Jolanta, Wieliczka</strong>
+    </div>
+</section>
+
+<section>
+    <h2>Lokalizacja i Kontakt</h2>
+    <p style="text-align: center; margin-bottom: 30px;">Dojazd do klientów: Kraków, Wieliczka, Skawina, Niepołomice, Zabierzów, Zielonki.</p>
+    <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.883864892942!2d20.044734676033098!3d50.01353191872728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716438acec71c71%3A0xc3e8621157c1fb7c!2sTomasz%20Jarosz%20Mtj%20Po%C5%9Brednictwo%20Handlowe!5e0!3m2!1spl!2spl!4v1776967002609!5m2!1spl!2spl" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<a href="tel:+48660469203" id="sticky-call">📞 Zadzwoń: 660 469 203</a>
+
+<footer>
+    <p><strong>Tomasz Jarosz – Specjalistyczny Serwis Armatury Kraków</strong></p>
+    <p>© 2026 Wszystkie prawa zastrzeżone. Obsługa marek Premium.</p>
+    <a href="https://www.facebook.com/profile.php?id=61570691483438" target="_blank" style="color: white; text-decoration: underline;">Odwiedź nas na Facebooku</a>
+</footer>
+
+</body>
+</html>
