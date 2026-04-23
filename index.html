@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Serwis Hansgrohe, Grohe, Geberit Kraków | Naprawa Gessi, Huppe, Duravit</title>
-    <meta name="description" content="Profesjonalny serwis armatury premium w Krakowie. Naprawa Hansgrohe, Grohe, Geberit. Szybki dojazd!">
+    <meta name="description" content="Profesjonalny serwis armatury premium w Krakowie. Naprawa Hansgrohe, Grohe, Geberit, Gessi. Szybki dojazd i oryginalne części!">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -19,39 +19,41 @@
 
         body { font-family: 'Inter', sans-serif; margin:0; background: var(--bg-light); color: #333; line-height: 1.6; }
 
-        /* POPRAWIONY NAGŁÓWEK - RESPONSYWNY */
+        /* NAGŁÓWEK - NATURALNA KOLORYSTYKA PREMIUM */
         header {
+            /* Grafitowy gradient zamiast mocnego niebieskiego */
             background: linear-gradient(rgba(20, 25, 30, 0.6), rgba(20, 25, 30, 0.75)), url('serwis-bg.jpg');
             background-size: cover;
             background-position: center bottom; 
             background-attachment: fixed;
             color: white;
             text-align: center;
-            /* Elastyczny padding: mniejszy na start, dopasowany do ekranu */
             padding: 80px 20px; 
-            min-height: 40vh; /* Zajmuje max 40% wysokości ekranu zamiast całego */
+            min-height: 45vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .header-content { max-width: 900px; width: 100%; }
-        header h1 { font-size: 2.5em; margin-bottom: 15px; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
-        header p { font-size: 1.15em; margin-bottom: 30px; text-shadow: 0 1px 5px rgba(0,0,0,0.5); }
+        header h1 { font-size: 2.6em; margin-bottom: 15px; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.6); }
+        header p { font-size: 1.2em; margin-bottom: 30px; text-shadow: 0 1px 5px rgba(0,0,0,0.6); font-weight: 400; }
 
         /* PRZYCISKI */
         .btn-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .call-btn, .shop-btn {
-            padding: 15px 30px;
+            padding: 16px 32px;
             border-radius: 50px;
             font-weight: bold;
             text-decoration: none;
             transition: 0.3s;
-            font-size: 1em;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
         }
         .call-btn { background: var(--accent); color: white; box-shadow: 0 4px 15px rgba(0,200,83,0.4); }
-        .shop-btn { background: white; color: var(--dark); }
-        .call-btn:hover { transform: translateY(-3px); }
+        .shop-btn { background: white; color: var(--dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .call-btn:hover, .shop-btn:hover { transform: translateY(-3px); }
 
         /* BRANDS BAR */
         .brands-section { background: white; padding: 30px 20px; border-bottom: 1px solid #eee; }
@@ -71,41 +73,41 @@
             color: #666;
             font-size: 0.8em;
             text-transform: uppercase;
+            transition: 0.3s;
         }
+        .brand-tile:hover { border-color: var(--primary); color: var(--primary); }
 
         /* SEKCJE */
-        section { max-width: 1000px; margin: auto; padding: 50px 20px; }
-        h2 { text-align: center; color: var(--dark); margin-bottom: 30px; font-size: 1.8em; }
-        h2::after { content: ''; display: block; width: 50px; height: 3px; background: var(--primary); margin: 10px auto; }
+        section { max-width: 1000px; margin: auto; padding: 60px 20px; }
+        h2 { text-align: center; color: var(--dark); margin-bottom: 35px; font-size: 2em; }
+        h2::after { content: ''; display: block; width: 55px; height: 4px; background: var(--primary); margin: 12px auto; }
 
-        .why-me { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .why-item { text-align: center; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        
-        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; }
+        .why-me { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .why-item { text-align: center; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .why-item h3 { color: var(--primary); margin-bottom: 10px; }
+
+        /* USŁUGI */
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; }
         .card h3 { color: var(--primary); margin-top: 0; }
+        .card ul { padding-left: 20px; }
 
-        .review { background: #fff; padding: 20px; border-radius: 12px; border-left: 5px solid var(--accent); margin-bottom: 20px; font-style: italic; }
-
-        .map-wrapper { width: 100%; height: 350px; border-radius: 20px; overflow: hidden; }
+        /* MAPA */
+        .map-wrapper { width: 100%; height: 380px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .map-wrapper iframe { width: 100%; height: 100%; border: 0; }
 
-        footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; font-size: 0.9em; }
-        #sticky-call { position: fixed; bottom: 20px; left: 20px; background: var(--accent); color: white; padding: 14px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 9999; }
+        /* FOOTER */
+        footer { background: var(--dark); color: white; text-align: center; padding: 50px 20px; }
+        #sticky-call { position: fixed; bottom: 20px; left: 20px; background: var(--accent); color: white; padding: 14px 26px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 9999; }
 
-        /* MOBILE FIXES */
+        /* RWD MOBILNE */
         @media (max-width: 768px) {
-            header { 
-                padding: 60px 15px; 
-                background-attachment: scroll; /* Wyłącza paralaksę na komórkach - ważne! */
-                min-height: auto;
-            }
-            header h1 { font-size: 1.7em; }
-            header p { font-size: 1em; }
+            header { padding: 60px 15px; background-attachment: scroll; min-height: auto; }
+            header h1 { font-size: 1.8em; }
+            header p { font-size: 1.05em; }
             .btn-container { flex-direction: column; }
-            .call-btn, .shop-btn { width: 100%; box-sizing: border-box; text-align: center; }
-            section { padding: 30px 15px; }
-            .brand-tile { font-size: 0.7em; padding: 8px; }
+            .call-btn, .shop-btn { width: 100%; box-sizing: border-box; text-align: center; justify-content: center; }
+            section { padding: 40px 15px; }
         }
     </style>
 </head>
@@ -138,32 +140,32 @@
 
 <section>
     <div class="why-me">
-        <div class="why-item"><h3>🛡️ Wiedza</h3><p>Ekspercki serwis armatury premium i systemów podtynkowych.</p></div>
-        <div class="why-item"><h3>⚙️ Części</h3><p>Tylko oryginalne uszczelki i podzespoły producenta.</p></div>
-        <div class="why-item"><h3>📍 Kraków</h3><p>Szybki dojazd i naprawa u klienta (Wieliczka, Skawina).</p></div>
+        <div class="why-item"><h3>🛡️ Doświadczenie</h3><p>Wieloletnia praktyka w serwisie luksusowej armatury premium.</p></div>
+        <div class="why-item"><h3>⚙️ Jakość</h3><p>Stosuję wyłącznie oryginalne części zamienne i uszczelki.</p></div>
+        <div class="why-item"><h3>📍 Kraków</h3><p>Dojazd do klienta i naprawa na miejscu (Wieliczka, okolice).</p></div>
     </div>
 </section>
 
 <section>
-    <h2>Zakres usług</h2>
+    <h2>Zakres usług serwisowych</h2>
     <div class="services">
         <div class="card">
             <h3>Baterie i Termostaty</h3>
-            <ul><li>Serwis Hansgrohe, Grohe, Gessi</li><li>Wymiana głowic i uszczelek</li></ul>
+            <ul><li>Naprawa Hansgrohe, Grohe, Gessi</li><li>Wymiana głowic termostatycznych</li><li>Usuwanie nieszczelności</li></ul>
         </div>
         <div class="card">
             <h3>Systemy Podtynkowe</h3>
-            <ul><li>Naprawa spłuczek Geberit</li><li>Serwis zaworów i stelaży WC</li></ul>
+            <ul><li>Serwis spłuczek Geberit, Grohe</li><li>Wymiana zaworów i uszczelek</li><li>Naprawa mechanizmów spustowych</li></ul>
         </div>
         <div class="card">
             <h3>Kabiny Prysznicowe</h3>
-            <ul><li>Serwis Huppe i New Trendy</li><li>Regulacja rolek i szczelność</li></ul>
+            <ul><li>Serwis kabin Huppe i New Trendy</li><li>Regulacja i wymiana rolek</li><li>Uszczelnianie i konserwacja</li></ul>
         </div>
     </div>
 </section>
 
 <section>
-    <h2>Lokalizacja i Kontakt</h2>
+    <h2>Lokalizacja serwisu</h2>
     <div class="map-wrapper">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.883864892942!2d20.044734676033098!3d50.01353191872728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716438acec71c71%3A0xc3e8621157c1fb7c!2sTomasz%20Jarosz%20Mtj%20Po%C5%9Brednictwo%20Handlowe!5e0!3m2!1spl!2spl!4v1776967002609!5m2!1spl!2spl" allowfullscreen="" loading="lazy"></iframe>
     </div>
@@ -172,7 +174,8 @@
 <a href="tel:+48660469203" id="sticky-call">📞 Zadzwoń</a>
 
 <footer>
-    <p><strong>Tomasz Jarosz – Serwis Armatury Kraków</strong><br>© 2026 Obsługa marek Premium.</p>
+    <p><strong>Tomasz Jarosz – Serwis Armatury Kraków</strong><br>© 2026 Specjalista marek Hansgrohe, Grohe, Geberit, Gessi, Huppe.</p>
+    <a href="https://www.facebook.com/profile.php?id=61570691483438" target="_blank" style="color: white; font-size: 0.9em;">Znajdź nas na Facebooku</a>
 </footer>
 
 </body>
